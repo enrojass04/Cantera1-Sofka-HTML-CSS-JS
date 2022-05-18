@@ -1,9 +1,17 @@
+.estilo{
+    background-color: #b2bbce;
+    max-width: 600px;
+    margin: 0 auto;
+    height: 280px;
+}
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #ded5d5;
+    background: #e3f1f1;
     width: 100%;
-    max-width: 1024px;
-    margin: 0 auto;
+    max-width: 800px;
+    margin: auto;
     height: 600px;
 }
 
@@ -13,6 +21,10 @@ main {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    max-height: 750px;
+
 }
 
 p {
@@ -24,7 +36,7 @@ footer {
     text-align: center;
 }
 
-.menu {
+.nav {
     list-style: none;
     padding: 0;
     background: #092327;
@@ -38,25 +50,35 @@ footer {
     align-items: center;   
 }
 
-.menu li a {
+#content {
+    column-count:2;
+    background: white;
+    border-radius: 10px;
+    padding-top: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.nav li a {
     text-decoration: none;
     color: white;
     padding: 2px;
     display: block;
 }
 
-.menu li {
+.nav li {
     display: inline-block;
     text-align: center;
 }
 
-.menu li a:hover {
+.nav li a:hover {
     background: #ef8354;
 }
 
 .skills {
     list-style-type: none;
-    padding: 0;
+    font-size: smaller; 
+    padding-left: 0px;
 }
 
 .task {
@@ -65,10 +87,16 @@ footer {
     font-size: smaller;
 }
 
+#par1 {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align:justify;
+}
+
 #foto {
     text-align: center;
-    width: 200px;
-    height: 250px;
+    width: 150px;
+    height: 200px;
     border: 10px solid rgb(30, 30, 159);
     border-radius: 22px;
     background-color: #10082b;
