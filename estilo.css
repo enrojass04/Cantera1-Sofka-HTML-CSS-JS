@@ -130,6 +130,23 @@ p {
     font-family: 'Times New Roman';
 }
 
+.mostrar {
+    display: none;
+    overflow: hidden;
+}
+
+.acordeon {
+    background-color: #1995AD;
+    color: white;
+    width: 150px;
+    height: 25px;
+    border-radius: 3px;
+    border: #A1D6E2;
+    font-family: 'Times New Roman';
+}
+
+
+
 #tema2 {
     background-color: #A1D6E2;
     border-radius: 5px;

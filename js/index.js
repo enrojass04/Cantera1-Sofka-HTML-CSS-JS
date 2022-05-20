@@ -1,5 +1,5 @@
 const cambiarFondo = (id) => {
-    let element = document.getElementById("body");    
+    let element = document.getElementById("body");
     element.style.backgroundColor = id.value;
     localStorage.setItem('color', id.value);
 
@@ -7,7 +7,7 @@ const cambiarFondo = (id) => {
     element2.style.backgroundColor = id.value;
     localStorage.setItem('color', id.value); */
 
-    let element3 = document.getElementById("tema2");    
+    let element3 = document.getElementById("tema2");
     element3.style.backgroundColor = id.value;
     localStorage.setItem('color', id.value);
 }
@@ -32,4 +32,18 @@ const cargarColor = () => {
         let element2 = document.getElementById("tema1");
         element2.style.backgroundColor = color1;
     } */
+}
+
+let opcionesAcordeon = document.getElementsByClassName("acordeon");
+
+for (let i = 0; i < opcionesAcordeon.length; i++) {
+    opcionesAcordeon[i].addEventListener('click', function() {
+        this.classList.toggle("active");
+        let siguiente = this.nextElementSibling;
+        if (siguiente.style.display == "block") {
+            siguiente.style.display = "none";
+        } else {
+            siguiente.style.display = "block";
+        }
+    })
 }
