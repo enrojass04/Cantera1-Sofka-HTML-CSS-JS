@@ -1,0 +1,32 @@
+
+.selector {
+    width: 30px;
+    height: 30px;
+    border: 1px solid;
+    display: inline-block;
+}
+
+#oscuro {
+    background-color: rebeccapurple;
+}
+
+#claro {
+    background-color: green ;
+}
+
+#selectors-container {
+    text-align: center;
+}
+
+ul {
+    padding-inline-start: 0;
+    list-style: none;
+}
+
+.li {
+    padding: 10px;
+}
+
+#frutas-container {
+    text-align: center;
+}
