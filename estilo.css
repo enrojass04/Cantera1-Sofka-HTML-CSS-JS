@@ -97,7 +97,6 @@ p {
   }
 
 .informacion {
-    /* background-color: #b2bbce; */
     border-radius: 5px;
     margin-top: 10px;
     width: 80%;
@@ -176,53 +175,3 @@ p {
     margin-top: 2px;
     margin-left: 5%;
 }
-
-/* .perfil {
-    background-color: #b2bbce; 
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    width: 80%;
-} */
-
-
-/* #content {
-    column-count:2;
-    background: white;
-    border-radius: 10px;
-    padding-top: 10px;
-    align-items: center;
-    text-align: center;
-}
-
-#parrafo1 {
-    margin-left: 10px;
-    margin-right: 10px;
-    text-align:justify;
-} */
-
-
-
-
-/* .nuevoEstilo1 {
-    background-color: rgb(30, 26, 26);
-    color: white;
-}
-
-.nuevoEstilo1 .principal {
-    background-color:black;
-    box-shadow: 4px 6px 8px rgb(253, 253, 253);
-    font-weight: 600;
-    text-shadow: 1px 1px 8px rgb(255, 255, 255);
-    color: white;
-}
-
-.nuevoEstilo2 .principal {
-    background-color:rgb(222, 25, 25);
-    box-shadow: 4px 6px 8px rgb(253, 253, 253);
-    font-weight: 600;
-    text-shadow: 1px 1px 8px rgb(255, 255, 255);
-    color: white;
-} */
