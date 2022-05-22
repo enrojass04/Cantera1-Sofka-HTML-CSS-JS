@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-registro {
+    width: 75%;
+    background-color: #24303c;
+    padding: 30px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 4px;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.form-registro h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.entradas {
+    color: white;
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+#mensaje {
+    height: 100px;
+}
+
+.form-registro .boton {
+    width: 30%;
+    height: 20%;
+    background-color: #1f53c5;
+    border: none;
+    padding: 12px;
+    color: white;
+    margin: 16px 0;
+    font-size: 16px;
+    margin-right: 10px;
+    margin-left: 10px;
+    border-radius: 4px;
+}
+
+
+

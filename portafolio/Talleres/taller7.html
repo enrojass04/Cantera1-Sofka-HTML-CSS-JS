@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script async src="../js/index.js"></script>
+</head>
+<body>
+
+    <button type="button" class="regresar"><a href="../index.html">Volver al portafolio</a></button>
+    <h1>Taller2 Java</h1>
+    <section class="seccion1">
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 1</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		
+		System.out.println("Escriba su edad:");
+	    int edad = in.nextInt(); 
+	    
+	    String e = esMayor(edad);
+	    System.out.println(e);
+	}
+	
+	static String esMayor(int edad) {
+		String str ="";
+		if (edad >= 18) {
+			str = "Usted es mayor de edad";
+		}
+		return str;
+	}
+
+}                        
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 2</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		
+		System.out.println("Escriba su edad:");
+	    int edad = in.nextInt(); 
+	    
+	    String e = esMayor(edad);
+	    System.out.println(e);
+	}
+	
+	static String esMayor(int edad) {
+		String str ="";
+		if (edad < 18) {
+			str = "Usted aún es un niño(a).";
+		}
+		return str;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 3</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		
+		System.out.println("Escriba su nombre completo:");
+	    String nombre = in.nextLine(); 
+		System.out.println("Escriba su edad:");
+	    int edad = in.nextInt(); 
+	    
+	    String e = esMayor(nombre, edad);
+	    System.out.println(e);
+	}
+	
+	static String esMayor(String nombre, int edad) {
+		String str ="";
+		if (edad >= 18) {
+			str = nombre + " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+		}
+		else {
+			str = nombre + " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+		}
+		return str;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 4</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	
+	private static Scanner in = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		
+		String[] peliculas = { "Toy Story", "El señor de los anillos", "Piratas del Caribe" };
+
+		try {
+			
+			int opcion = menu();
+
+			switch (opcion) {
+			case 1:
+				menu2();
+				int opcion1 = in.nextInt();
+				String a = alquilar(opcion1, peliculas);
+				System.out.println(a);
+				break;
+
+			case 2:
+				menu3();
+				break;
+				
+			case 3:
+				menu4();
+				int opcion3 = in.nextInt();				
+				String b = recibir(opcion3);
+				System.out.println(b);
+				
+				if (opcion3==1) {
+					System.out.println("Desea realizar una anotación 1 para SI, 2 para NO");
+					int key = in.nextInt();
+					
+					if (key==1) {
+						String notacion = capturar();
+						System.out.println("Su anotación fue registrada.");
+					} else {
+						System.out.println("Ha deicido no realizar anotación");
+					}
+
+				}			
+				break;
+
+			default:
+				System.out.println("Las opciones son entre 1 y 3");
+				break;
+			}
+
+		} catch (InputMismatchException e) {
+			System.err.println("Debes introducir un número");
+			in.nextLine();
+		}
+
+	}
+
+	static int menu() {
+		System.out.println("Elija una opción");
+		System.out.println("1. Alquilar pelicula");
+		System.out.println("2. Consultar pelicula");
+		System.out.println("3. Recibir pelicula");
+		return  in.nextInt();
+	}
+
+	public static void menu2() {
+		System.out.println("Elija una pelicula");
+		System.out.println("1. Toy Story");
+		System.out.println("2. El señor de los anillos");
+		System.out.println("3. Piratas del Caribe");
+	
+	}
+	
+	static void menu3() {
+		System.out.println("Las peliculas disponibles son");
+		System.out.println("1. Toy Story");
+		System.out.println("2. El señor de los anillos");
+		System.out.println("3. Piratas del Caribe");
+	}
+
+	static void menu4() {
+		System.out.println("¿Desea recibir la película en la tienda?");
+		System.out.println("Presione 1 para SI ó cualquier otro número para NO.");
+	}
+	
+	public static String alquilar(int key, String[] pelicula) {
+		String str = "";
+		switch (key) {
+		case 1:
+			str = "" + pelicula[0];
+			break;
+
+		case 2:
+			str = "" + pelicula[1];
+			break;
+
+		case 3:
+			str = "" + pelicula[2];
+			break;
+
+		default:
+			str = "Opción no listada.";
+			break;
+		}
+		return str;
+	}
+
+	static String recibir(int key) {
+		String str = "";
+		if (key == 1) {
+			str = "La pelicula está disponible para ser entregada.";
+		} else {
+			str = "Ha deicido no recoger la pelicula";
+		}
+		return str;
+	}
+	
+	static String capturar() {
+		System.out.println("Escribir su anotación");		
+		in.nextLine();
+		return in.nextLine();
+	}
+	
+	static void anotacion(int key, String anotacion) {
+		if (key == 1) {
+			System.out.println("Escribir su anotación");
+			System.out.println("Su anotación fue registrada.");
+		} else {
+			System.out.println("Ha deicido no realizar anotación");
+		}
+
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 5</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+import java.util.Scanner;
+
+public class Ejercicio5 {
+	private static Scanner in = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		String[] medicamentos = { "Dolex", "Ibuprofeno", "Acetaminofen"};
+		int[] precios = {800, 900, 1000};
+		
+		int opcion = menu();
+		
+		switch (opcion) {
+		case 1:
+			menu2(medicamentos);
+			int opcion1 = in.nextInt();
+			String a = comprar(opcion1, medicamentos);
+			System.out.println(a);
+			break;
+
+		case 2:
+			menu3(medicamentos);
+			int opcion2 = in.nextInt();
+			String b = consultar(opcion2, medicamentos, precios);
+			System.out.println(b);
+			break;
+			
+		case 3:
+			menu4(medicamentos);
+				
+			break;
+
+		default:
+			System.out.println("Las opciones son entre 1 y 3");
+			break;
+		}
+		
+		
+				
+	}
+	
+	private static int menu() {
+		System.out.println("Elija una opción");
+		System.out.println("1. Comprar");
+		System.out.println("2. Consultar precios");
+		System.out.println("3. Realizar devolución");
+		return in.nextInt();
+	}
+	
+	static void menu2(String[] medicamento) {
+		System.out.println("¿Qué medicamento quiere comprar?");
+		System.out.println("1. "+ medicamento[0]);
+		System.out.println("2. "+ medicamento[1]);
+		System.out.println("3. "+ medicamento[2]);
+	}
+	
+	static void menu3(String[] medicamento) {
+		System.out.println("¿Qué precio del medicamento quiere consultar?");
+		System.out.println("1. "+ medicamento[0]);
+		System.out.println("2. "+ medicamento[1]);
+		System.out.println("3. "+ medicamento[2]);
+	}
+	
+	static void menu4(String[] medicamento) {
+		System.out.println("¿Qué medicamento quiere devolver?");
+		System.out.println("1. "+ medicamento[0]);
+		System.out.println("2. "+ medicamento[1]);
+		System.out.println("3. "+ medicamento[2]);
+	}
+	
+	static void listamed() {
+		
+	}
+	
+	static String comprar(int key, String[] med) {
+		String str = "";
+		switch (key) {
+		case 1:
+			str = "Usted llevará " + med[0];
+			break;
+
+		case 2:
+			str = "Usted llevará " + med[1];
+			break;
+
+		case 3:
+			str = "Usted llevará " + med[2];
+			break;
+
+		default:
+			str = "Opción no listada.";
+			break;
+		}
+		return str;
+	}
+	
+	static String consultar(int key, String[] med, int[] precio) {
+		String str = "";
+		switch (key) {
+		case 1:
+			str = med[0] + " tiene un costo de " + precio[0];
+			break;
+
+		case 2:
+			str = med[0] + " tiene un costo de " + precio[1];
+			break;
+
+		case 3:
+			str = med[0] + " tiene un costo de " + precio[2];
+			break;
+
+		default:
+			str = "Opción no listada.";
+			break;
+		}
+		return str;
+	}
+	
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 6</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+	static String[] motos = { "Yamaha", "Suzuki", "Honda" };
+
+	public static void main(String[] args) {
+
+		int opcion = 0;
+
+		opcion = menu();
+		switch (opcion) {
+		case 1:
+			System.out.println("Usted registrará la " + motos[0]);
+			observacion();
+			break;
+		case 2:
+			System.out.println("Usted registrará la " + motos[1]);
+			observacion();
+			break;
+		case 3:
+			System.out.println("Usted registrará la " + motos[2]);
+			observacion();
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+		System.out.println("Gracias");
+
+	}
+
+	static int menu() {
+		System.out.println("¿Qué moto desea registrar?");
+		System.out.println("1. " + motos[0]);
+		System.out.println("2. " + motos[1]);
+		System.out.println("3. " + motos[2]);
+		System.out.println("4. Salir");
+		return in.nextInt();
+	}
+
+	static void observacion() {
+		int valor = 0;
+		System.out.println("¿Desea realizar alguna observación?");
+		System.out.println("Marque 1 para sí de lo contrario cualquiere otro número");
+		valor = in.nextInt();
+		if (valor == 1) {
+			System.out.println("Escribala por favor:");
+			String str = inString.nextLine();
+		}
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 7</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	
+	private static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		
+		System.out.println("Ingrese su peso en (Kg):");
+		double peso = in.nextDouble();
+		System.out.println("Ingrese su estura en (m):");
+		double estura = in.nextDouble();
+		encontrarIMC(peso, estura);
+
+	}
+
+	static void encontrarIMC(double peso, double estatura) {
+
+		double imc = peso / (estatura * estatura);
+
+		if (imc < 18.5) {
+			System.out.println("Su IMC es de " + imc + " y está bajo de peso");
+		} else if (imc >= 18.5 & imc < 25.0) {
+			System.out.println("Su IMC es de " + imc + " y está en peso normal");
+		} else if (imc >= 25.0 & imc < 35.0) {
+			System.out.println("Su IMC es de " + imc + " y está en sobrepeso");
+		} else {
+			System.out.println("Su IMC es de " + imc + " y está obeso");
+		}
+	}
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 8</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+	
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+	static String[] tortas = { "Leche", "Fresas", "Chocolate" };
+	static int[] cantidad = { 10, 12, 15};
+	static int[] pedidos = new int [3];
+	static int[] ventas = new int [3];
+	static int[] porciones = {1, 5, 10, 15};
+	static boolean[] decoraciones = {true, false};
+
+	public static void main(String[] args) {
+		
+		int opcion = 0;
+	
+
+		opcion = menu();
+		switch (opcion) {
+		case 1:
+			System.out.println("Registre la cantidad de pedidos");
+			System.out.println("Leche");
+			pedidos[0] = in.nextInt();
+			System.out.println("Fresas");
+			pedidos[1] = in.nextInt();
+			System.out.println("Chocolate");	
+			pedidos[2] = in.nextInt();
+			break;
+		case 2:
+			System.out.println("La cantidad de tortas disponibles son:");
+			System.out.println(tortas[0]+": "+ cantidad[0]);
+			System.out.println(tortas[1]+": "+ cantidad[1]);
+			System.out.println(tortas[2]+": "+ cantidad[2]);
+			break;
+		case 3:
+			System.out.println("Registre la cantidad de ventas:");
+			System.out.println("Leche");
+			ventas[0] = in.nextInt();
+			System.out.println("Fresas");
+			ventas[1] = in.nextInt();
+			System.out.println("Chocolate");	
+			ventas[2] = in.nextInt();
+			int suma = sumar(ventas);
+			System.out.println("La cantidad de ventas son: "+suma);
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+		System.out.println("Gracias");
+
+	}
+	
+	static int menu() {
+		System.out.println("Elija una opción");
+		System.out.println("1. Registar pedidos");
+		System.out.println("2. Consultar tortas disponibles");
+		System.out.println("3. Registrar ventas diarias");
+		return in.nextInt();
+	}
+	
+	static int sumar(int[] A) {
+		int suma = 0;
+		for (int i = 0; i < A.length; i++) {
+			suma += A[i];			
+		}
+		return suma;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 9</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.Scanner;
+
+public class Ejercicio9 {
+	
+	private static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int opcion = 0;
+		double area = 0.0;
+
+		opcion = menu();
+		switch (opcion) {
+		case 1:
+			area = rectangulo();
+			System.out.println("El área es: "+area);
+			break;
+		case 2:
+			area = triangulo();
+			System.out.println("El área es: "+area);
+			break;
+		case 3:
+			area = trapecio();
+			System.out.println("El área es: "+area);
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+		System.out.println("Gracias");
+
+	}
+	
+	static int menu() {
+		System.out.println("Elija una opción");
+		System.out.println("1. Calcular área de un rectángulo");
+		System.out.println("2. Calcular área de un triángulo");
+		System.out.println("3. Calcular área de un trapecio");
+		System.out.println("4. Salir");
+		return in.nextInt();
+	}
+	
+	static double rectangulo() {
+		System.out.println("Ingrese el lado del rectángulo:");
+		double alto = in.nextDouble();
+		System.out.println("Ingrese el ancho del rectángulo:");
+		double ancho = in.nextDouble();
+		double area = alto*ancho;
+		return area;
+	}
+
+	static double triangulo() {
+		System.out.println("Ingrese el ancho del triángulo:");
+		double ancho = in.nextDouble();
+		System.out.println("Ingrese el alto del triángulo:");
+		double alto = in.nextDouble();
+		double area = (alto*ancho)/2;
+		return area;
+	}
+	
+	static double trapecio() {
+		System.out.println("Ingrese la base mayor del trapecio:");
+		double basemenor = in.nextDouble();
+		System.out.println("Ingrese la base menor del trapecio:");
+		double basemayor = in.nextDouble();
+		System.out.println("Ingrese la altura del trapecio:");
+		double altura = in.nextDouble();
+		double area = (basemenor+basemayor)*altura/2;
+		return area;
+	}
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 10</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller2Condicionales;
+
+import java.util.Scanner;
+
+public class Ejercicio10 {
+	
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		System.out.println("Ingrese su nombre:");
+		String nombre = inString.nextLine();
+		int opcion = 0;
+		double total = 1000.0;
+
+		opcion = menu();
+		switch (opcion) {
+		case 1:
+			ingresar(total);
+			break;
+		case 2:
+			retirar(total);
+			break;
+		case 3:
+			
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+		System.out.println();
+		System.out.println("Feliz día Sr(a) "+ nombre);
+
+	}
+
+	static int menu() {
+		System.out.println("Elija una opción");
+		System.out.println("1. Ingresar dinero a su cuenta");
+		System.out.println("2. Retirar dinero de su cuenta");
+		System.out.println("3. Consultar dinero disponible en su cuenta");
+		return in.nextInt();
+	}
+	
+	static void ingresar(double a) {
+		System.out.println("Ingrese el monto:");
+		double valor = in.nextInt();
+		if (valor > 0) {
+			System.out.println("¡Dinero ingresado exitosamente!");
+			a += valor;
+			System.out.println("Ahora su balance total es de: "+ a);
+		} else {
+			System.out.println("¡Recuerde que no puede ingresar saldo negativo!");
+			System.out.println("Su balance continua igual y es de: "+ a);			
+		}		
+	}
+	
+	static void retirar(double a) {
+		System.out.println("Ingrese el monto:");
+		double valor = in.nextInt();
+		if (valor <= a) {
+			System.out.println("¡Dinero retirado exitosamente!");
+			a -= valor;
+			System.out.println("Ahora su balance total es de: "+ a);
+		} else {
+			System.out.println("¡Lo sentimos, no tiene ese balance en su cuenta!");
+			System.out.println("SSu balance es de: "+ a);			
+		}
+	}
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+    </section>
+    
+</body>
+</html>

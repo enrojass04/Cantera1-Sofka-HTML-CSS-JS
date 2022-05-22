@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script async src="../js/index.js"></script>
+</head>
+<body>
+
+    <button type="button" class="regresar"><a href="../index.html">Volver al portafolio</a></button>
+    <h1>Taller Condicionales</h1>
+    <section class="seccion1">
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 1</button>
+            <section class="mostrar2">
+                <pre>
+                     <code>
+Proceso Ejercicio1
+
+    Definir  edad Como Entero;
+    
+    Escribir "Escriba su edad:"; 
+    Leer edad;
+    
+    Si edad >= 18 Entonces
+        Escribir "Usted es mayor de edad.";
+    FinSi
+        
+FinProceso
+                                </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 2</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio2
+
+    Definir  edad Como Entero;
+    
+    Escribir "Escriba su edad:"; 
+    Leer edad;
+    
+    Si edad < 18 Entonces
+        Escribir "Usted aún es un niño(a).";
+    FinSi
+        
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 3</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio3
+    Definir nombre , apellidos Como Caracter;
+    Definir  edad Como Entero;
+    
+    Escribir "Escriba su nombre" Sin Saltar;
+    Leer nombre;
+    Escribir "Escriba sus apellidos" Sin Saltar;
+    Leer apellidos;
+    Escribir "Escriba su edad" Sin Saltar;
+    Leer edad;
+    
+    Si edad >= 18 Entonces
+        Escribir nombre, apellidos, " usted es mayor de edad, por lo tanto puede entrar a la fiesta.";
+    SiNo
+        Escribir nombre, apellidos, " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa.";
+    FinSi                                        
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 4</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio4
+    Definir opcion, opcionPelicula, opcionEntrega, opcionAnotacion Como Entero;
+    Definir pelicula1, pelicula2, pelicula3, nota Como Caracter;	
+    
+    pelicula1 <- "Toy Story";
+    pelicula2 <- "El señor de los anillos";
+    pelicula3 <- "Piratas del Caribe";
+    
+    Escribir "Elija una opción";
+    Escribir "1. Alquilar pelicula";
+    Escribir "2. Consultar pelicula";
+    Escribir "3. Recibir pelicula";
+    
+    Leer opcion;
+    
+    Segun opcion Hacer
+        1:
+            Escribir "¿Elija una película?";
+            Escribir "1. ", pelicula1;
+            Escribir "2. ",pelicula2;
+            Escribir "3. ", pelicula3;
+            
+            Leer opcionPelicula;
+            
+            Segun opcionPelicula Hacer
+                1:
+                    Escribir "Usted alquilará ", pelicula1;
+                2:
+                    Escribir "Usted alquilará ", pelicula2;
+                3:
+                    Escribir "Usted alquilará ", pelicula3;
+                De Otro Modo:
+                    Escribir "Opción listada";
+            FinSegun
+
+        2:
+            Escribir "Las peliculas disponibles son:";
+            Escribir "1. ", pelicula1;
+            Escribir "2. ", pelicula2;
+            Escribir "3. ", pelicula3;
+            
+        3:
+            Escribir "¿Desea recibir la película en la tienda?";
+            Escribir "Presione 1 para SI ó 2 para NO.";
+            Leer opcionEntrega;
+            
+            Si opcionEntrega = 1 Entonces
+                Escribir "La pelicula está disponible para ser entregada.";
+                
+                Escribir "¿Desea realizar una anotación?";
+                Escribir "Presione 1 para SI ó cualquier otro número para NO.";
+                Leer opcionAnotacion;
+                
+                Si opcionAnotacion = 1 Entonces
+                    Escribir "Escriba su anotación";
+                    Leer nota;
+                    Escribir "Su anotación fue guarda.";
+                    
+                SiNo
+                    Escribir "Gracias por tu visita";
+                FinSi
+                
+            SiNo 
+                Si opcionEntrega = 2 Entonces
+                    Escribir  "Ha deicido no recoger la pelicula";
+                FinSi
+                Escribir "Opción incorrecta";
+            FinSi			
+            
+        De Otro Modo:
+            Escribir "opción no listada";
+    FinSegun
+    
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 5</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio5
+
+    Definir medicamento1, medicamento2, medicamento3, precio1,precio2, precio3 Como Caracter;
+    Definir opcion, opcionMedicamento, opcionPrecio, opcionDevolver Como Entero;
+
+    medicamento1 <- "Dolex";
+    medicamento2 <- "Ibuprofeno";
+    medicamento3 <- "Acetaminofen";
+
+    precio1 <- "800";
+    precio2 <- "900";
+    precio3 <- "1000";
+
+    Escribir "Elija una opción";
+    Escribir "1. Comprar";
+    Escribir "2. Consultar precios";
+    Escribir "3. Realizar devolución";
+
+    Leer opcion;
+
+    Segun opcion Hacer
+        1:
+            Escribir "¿Qué medicamento quiere comprar?";
+            Escribir "1. ", medicamento1;
+            Escribir "2. ",medicamento2;
+            Escribir "3. ", medicamento3;
+            
+            Leer opcionMedicamento;
+            
+            Segun opcionMedicamento Hacer
+                1:
+                    Escribir "Usted llevará: ", medicamento1;
+                2:
+                    Escribir "Usted llevará: ", medicamento2;
+                3:
+                    Escribir "Usted llevará: ", medicamento3;
+                De Otro Modo:
+                    Escribir "Opción listada";
+            FinSegun
+            
+        2:
+            Escribir "¿Qué precio del medicamento quiere consultar?";
+            Escribir "1. ", medicamento1;
+            Escribir "2. ",medicamento2;
+            Escribir "3. ", medicamento3;
+            
+            Leer opcionPrecio;
+            
+            Segun opcionPrecio Hacer
+                1:
+                    Escribir "La unidad de ", medicamento1, "tiene un costo de $", precio1;
+                2:
+                    Escribir "La unidad de ", medicamento2, "tiene un costo de $", precio2;
+                3:
+                    Escribir "La unidad de ", medicamento3, "tiene un costo de $", precio3;
+                De Otro Modo:
+                    Escribir "Opción listada";
+            FinSegun
+            
+        3:
+            Escribir "¿Qué medicamento quiere devolver?";
+            Escribir "1. ", medicamento1;
+            Escribir "2. ",medicamento2;
+            Escribir "3. ", medicamento3;
+            
+            Leer opcionDevolver;
+            
+            Segun opcionDevolver Hacer
+                1:
+                    Escribir "Usted devolverá: ", medicamento1;
+                2:
+                    Escribir "Usted devolverá: ", medicamento2;
+                3:
+                    Escribir "Usted devolverá: ", medicamento3;
+                De Otro Modo:
+                    Escribir "Opción listada";
+            FinSegun
+            
+        De Otro Modo:
+            Escribir "Opción listada";
+    FinSegun
+
+    Escribir "";
+    Escribir "Gracias por su tiempo.";	
+
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 6</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio6
+	Definir moto1, moto2, moto3, observacion, novedad, arreglo Como Caracter;
+	Definir opcion, opcionEntrada, opcionSalida, decision Como Entero;
+	
+	moto1 <- "Yamaha";
+	moto2 <- "Suzuki";
+	moto3 <- "Honda";
+	
+	Escribir "Elija una opción";
+	Escribir "1. Registrar Entrada";
+	Escribir "2. Registrar Salida";
+	
+	Leer opcion;
+	
+	Segun opcion Hacer
+		1:
+			Escribir "¿Qué moto desea registrar ingreso?";
+			Escribir "1. ", moto1;
+			Escribir "2. ",moto2;
+			Escribir "3. ", moto3;
+			
+			Leer opcionEntrada;
+			
+			Segun opcionEntrada Hacer
+				1:
+					Escribir "Usted registrará el ingreso de una : ", moto1;					
+					Escribir "¿Desea realizar alguna observación?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su observación:";
+						Leer observacion;
+						Escribir "Su observación se guardó exitosamente.";
+					FinSi
+				2:
+					Escribir "Usted registrará el ingreso de una : ", moto2;					
+					Escribir "¿Desea realizar alguna observación?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su observación:";
+						Leer observacion;
+						Escribir "Su observación se guardó exitosamente.";
+					FinSi
+				3:
+					Escribir "Usted registrará el ingreso de una : ", moto3;
+					Escribir "¿Desea realizar alguna observación?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su observación:";
+						Leer observacion;
+						Escribir "Su observación se guardó exitosamente.";
+					FinSi
+				De Otro Modo:
+					Escribir "Opción listada";
+			FinSegun
+			Escribir "!Registro de entrada Exitoso!";
+			
+		2:
+			Escribir "¿Qué moto desea registrar salida?";
+			Escribir "1. ", moto1;
+			Escribir "2. ",moto2;
+			Escribir "3. ", moto3;
+			
+			Leer opcionSalida;
+			
+			Segun opcionSalida Hacer
+				1:
+					Escribir "Usted registrará la salida de una : ", moto1;
+					Escribir "¿Desea registrar alguna novedad?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su novedad:";
+						Leer novedad;
+						Escribir "Su novedad se guardó exitosamente.";
+					FinSi
+					
+					Escribir "¿Desea registrar los arreglos hechos?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su arreglo:";
+						Leer arreglo;
+						Escribir "Su arreglo se guardó exitosamente.";
+					FinSi
+				2:
+					Escribir "Usted registrará la salida de una : ", moto2;
+					Escribir "¿Desea registrar alguna novedad?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su novedad:";
+						Leer novedad;
+						Escribir "Su novedad se guardó exitosamente.";
+					FinSi
+					
+					Escribir "¿Desea registrar los arreglos hechos?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su arreglo:";
+						Leer arreglo;
+						Escribir "Su arreglo se guardó exitosamente.";
+					FinSi
+				3:
+					Escribir "Usted registrará la salida de una : ", moto3;
+					Escribir "¿Desea registrar alguna novedad?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su novedad:";
+						Leer novedad;
+						Escribir "Su novedad se guardó exitosamente.";
+					FinSi
+					
+					Escribir "¿Desea registrar los arreglos hechos?";
+					Escribir "Escriba 1 para SI cualquier otro número para NO";
+					
+					Leer decision;
+					
+					Si decision = 1 Entonces
+						Escribir "Escriba su arreglo:";
+						Leer arreglo;
+						Escribir "Su arreglo se guardó exitosamente.";
+					FinSi
+				De Otro Modo:
+					Escribir "Opción listada";
+			FinSegun
+			Escribir "!Registro de salida Exitoso!";
+		De Otro Modo:
+			Escribir "Opción no listada";
+			
+	FinSegun
+	
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 7</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio7
+	
+	Definir peso Como Entero;
+	Definir IMC Como Real;
+	
+	Escribir "Escriba su peson en Kilogramos: " Sin Saltar;
+	Leer peso;
+	Escribir "Escriba su estatura en metros: " Sin Saltar;
+	Leer estatura;
+	
+	IMC <- (peso/(estatura*estatura));
+	
+	Escribir  "Su indice de masa corporal es: ", IMC Sin Saltar;	
+
+	
+	Si IMC < 18.5 Entonces
+		Escribir " y está bajo de peso.";
+	SiNo
+		Si IMC >= 18.5 & IMC < 25 Entonces
+			Escribir " y está en peso normal.";
+		SiNo
+			Si IMC >= 25 & IMC < 35 Entonces
+				Escribir " y está en sobrepeso.";
+			SiNo
+				Escribir " y está obeso.";
+			FinSi
+		FinSi
+	FinSi	
+	
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 8</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio8
+	Definir pedidos, cantidadTortas, ventas, opcion Como Entero;
+	
+	pedidos <- 0;
+	cantidadTortas <- 5;
+	ventas <- 0;
+	
+	Escribir "Elija una opción";
+	Escribir "1. Registar pedidos";
+	Escribir "2. Consultar tortas disponibles";
+	Escribir "3. Registrar ventas diarias";
+	
+	Leer opcion;
+	
+	Segun opcion Hacer
+		1:
+			Escribir "Registre la cantidad de pedidos";
+			Leer pedidos;
+			Escribir "Los pedidos totales son: ", pedidos;
+		2:
+			Escribir "La cantidad de tortas disponibles son:";
+			Escribir cantidadTortas;
+		3:
+			Escribir "Registre la cantidad de ventas";
+			Leer ventas;
+			Escribir "Los ventas totales son: ", ventas;
+		De Otro Modo:
+			Escribir "Opción no listada";
+	FinSegun
+	Escribir  "¡Gracias por tu visita!";
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 9</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio9
+	Definir ancho, alto, baseMayor, baseMenor, altura Como Real;
+	Definir areaRectangulo, areaTriangulo, areaTrapecio Como Real;
+	Definir  opcion Como Entero;
+	
+	Escribir "Elija una opción";
+	Escribir "1. Calcular área de un rectángulo";
+	Escribir "2. Calcular área de un triángulo";
+	Escribir "3. Calcular área de un trapecio";
+	
+	Leer opcion;
+	
+	Segun opcion Hacer
+		1:
+			Escribir "Ingrese el ancho del rectángulo" Sin Saltar;
+			Leer ancho;
+			Escribir "Ingrese la altura del rectángulo: " Sin Saltar;
+			Leer alto;
+			areaRectangulo <- (ancho*alto);
+			Escribir "El área del rectángulo es: ", areaRectangulo;
+			
+		2:
+			Escribir "Ingrese el ancho del triángulo" Sin Saltar;
+			Leer ancho;
+			Escribir "Ingrese la altura del triángulo: " Sin Saltar;
+			Leer alto;
+			areaTriangulo <- (ancho*alto)/2;
+			Escribir "El área del triángulo es: ", areaTriangulo;
+			
+		3:	Escribir "Ingrese la base mayor del trapecio" Sin Saltar;
+			Leer baseMayor;
+			Escribir "Ingrese la base menor del trapecio: " Sin Saltar;
+			Leer baseMenor;
+			Escribir "Ingrese la altura del trapecio: " Sin Saltar;
+			Leer altura;
+			areaTrapecio <- ((baseMayor+baseMenor)*altura)/2;
+			Escribir "El área del trapecio es: ", areaTrapecio;
+			
+		De Otro Modo:
+			Escribir "Opción no listada";
+	FinSegun
+	
+	Escribir "Gracias por el tiempo";
+	
+FinProceso
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 10</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+Proceso Ejercicio10
+	
+	Definir  cantidad, retiro, total, ingreso Como Real;
+	Definir nombre Como Caracter;
+	Definir opcion Como Entero;
+	
+	Escribir "Bienvenido, escriba su nombre a continuación";
+	Leer nombre;
+	
+	total <- 1000.0;
+	
+	Escribir "Elija una opción Sr(a) ", nombre;
+	Escribir "1. Ingresar dinero a su cuenta";
+	Escribir "2. Retirar dinero de su cuenta";
+	Escribir "3. Consultar dinero disponible en su cuenta";
+	
+	Leer opcion;
+	
+	Segun opcion Hacer
+		1:
+			Escribir "Ingrese la cantidad a ingresar";
+			Leer  ingreso;
+			Si ingreso >= 0 Entonces
+				Escribir "¡Dinero ingresado exitosamente!";
+				total <- total + ingreso;
+				Escribir "Ahora su balance total es de: ", total;
+			SiNo
+				Escribir "¡Recuerde que no puede ingresar saldo negativo!";
+				Escribir "Su balance continua igual y es de: ", total;
+			FinSi
+			
+		2:
+			Escribir "Ingrese la cantidad a retirar";
+			Leer  retiro;
+			Si retiro > total Entonces
+				Escribir "¡Lo sentimos, no tiene ese balance en su cuenta!";
+				Escribir "Su balance es de: ", total;
+			SiNo
+				Escribir "¡Dinero retirado exitosamente!";
+				total <- total - retiro;
+				Escribir "Ahora su balance total es de: ", total;
+			FinSi
+		3:
+			Escribir "Su balance es de: ", total;
+		De Otro Modo:
+			Escribir "Opción no listada";
+	FinSegun
+	
+	Escribir "Feliz día Sr(a) ", nombre;
+	
+FinProceso
+
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Video</button>
+            <section class="mostrar2">
+                <embed class="video" src="https://www.youtube.com/embed/_rtl_UocjuU"  type="" width="800px" height="600px">
+            </section>
+        </article>
+
+    </section>    
+</body>
+</html>

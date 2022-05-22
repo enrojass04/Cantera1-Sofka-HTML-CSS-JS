@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script async src="../js/index.js"></script>
+</head>
+<body>
+
+    <button type="button" class="regresar"><a href="../index.html">Volver al portafolio</a></button>
+    <h1>Taller3 Java</h1>
+    <section class="seccion1">
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 1</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+public class Ejercicio1 {
+	
+	public static void main(String [] arg) {
+		
+		triangulo();
+		
+	}
+	
+	static void triangulo() {
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < i; j++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+}                        
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 2</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		
+		triangulo();
+
+	}
+	
+	static void triangulo() {
+		int i = 1;
+		while (i <= 10) {
+			int j = 1;
+			int k = 1;			
+			while (j <= 10-i) {
+				System.out.print(" ");
+				j++;
+			}			
+			while (k <= i) {
+				System.out.print("*");
+				k++;
+			}
+			i++;
+			System.out.println();			
+		}
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 3</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		
+		triangulo();
+
+	}
+	
+	
+	static void triangulo() {
+		int i = 1;
+		do {
+			int j = 1;	int k = 1;	int l = 1;
+			int m = 1;	int n = 1;	int x = 1;
+			
+			do {
+				System.out.print(" ");
+				j++;
+			} while (j <= 12-i);
+			
+			if (i < 12) {
+				do {
+					System.out.print("*");
+					k++;
+				} while ( k <= i*2-1);
+			} else {
+				do {
+					if (i <= 13 && l <= 9 ) {
+						System.out.print(" ");
+					}
+					l++;
+				} while (l <= i);
+				do {
+					if (i <= 13) {
+						System.out.print("*");
+					}
+					m++;
+				} while (m < 4);
+				
+				if (i > 13) {
+					do {
+						System.out.print(" ");
+						n++;
+					} while (n < 23-i);
+					
+					do {
+						System.out.print("*");
+						x++;
+					} while (x < i*2-22);
+				}
+			}
+			System.out.println();
+			i++;
+		} while (i <= 16);
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 4</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+	
+	private static Scanner in = new Scanner(System.in);
+	
+	public static void main(String[] arg) {
+		
+		System.out.println("Ingrese el número de tabla que quiere obtener:");
+		int n = in.nextInt();
+		tabla(n);
+		
+	}
+	
+	static void tabla(int n) {
+		for (int i = 1; i <= 10; i++) {
+			System.out.println(n + " X " + i + " = " + n*i);
+		}
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 5</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+	private static Scanner in = new Scanner(System.in);
+	
+	public static void main(String[] args) {
+		
+		int opcion = 0;
+		String nombre = "";
+		while (opcion != 3) {
+			opcion = menu();
+			if (opcion == 1) {
+				nombre = capturar();
+			}
+			if (opcion == 2  ) {
+				if (nombre != "") {
+					System.out.println("Hola "+nombre);
+				} else {
+					System.out.println("No hay nombre registrado.");
+				}
+			}
+		}
+		
+		System.out.println("Gracias");
+		
+	}
+	
+	static int menu() {
+		System.out.println("Menu de usuario:");
+		System.out.println("1. Captura Nombre");
+		System.out.println("2. Saludar persona");
+		System.out.println("3. Salir");
+		return in.nextInt();
+	}
+	
+	static String capturar() {
+		System.out.println("Escriba su nombre");		
+		in.nextLine();
+		return in.nextLine();
+	}
+	
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 6</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+import java.util.Scanner;
+
+public class Ejercicio6 {
+
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+
+	static String[] nombres = new String[3];
+	static String[] organizaciones = new String[3];
+	static String[] telefonos = new String[3];
+
+	public static void main(String[] args) {
+		int opcion = 0;
+		int opcion2 = 0;
+		int opcion3 = 0;
+
+		while (opcion != 4) {
+			opcion = menu();
+			switch (opcion) {
+			case 1:
+				capturarDatos();
+				break;
+			case 2:
+				opcion2 = menu2();
+				buscar(opcion2);
+				break;
+			case 3:
+				opcion3 = menu2();
+				eliminar(opcion3);
+				break;
+			case 4:
+				System.out.println("Adios");
+				break;
+
+			default:
+				System.out.println("Opción invalida");
+			}
+		}
+
+	}
+	
+	static void eliminar(int opcion) {
+		switch (opcion) {
+		case 1:
+			nombres[0] = "Sin registro";
+			organizaciones[0] = "Sin registro";
+			telefonos[0] = "Sin registro";
+			System.out.println("¡Contacto eliminado!");
+			break;
+		case 2:
+			nombres[1] = "Sin registro";
+			organizaciones[1] = "Sin registro";
+			telefonos[1] = "Sin registro";
+			System.out.println("¡Contacto eliminado!");
+			break;
+		case 3:
+			nombres[2] = "Sin registro";
+			organizaciones[2] = "Sin registro";
+			telefonos[2] = "Sin registro";
+			System.out.println("¡Contacto eliminado!");
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+	}
+
+	static void buscar(int opcion) {
+		switch (opcion) {
+		case 1:
+			System.out.println("Nombre: "+nombres[0]+" Organización: "+ organizaciones[0]+" Teléfono: "+telefonos[0]);
+			break;
+		case 2:
+			System.out.println("Nombre: "+nombres[1]+" Organización: "+ organizaciones[1]+" Teléfono: "+telefonos[1]);
+			break;
+		case 3:
+			System.out.println("Nombre: "+nombres[2]+" Organización: "+ organizaciones[2]+" Teléfono: "+telefonos[2]);
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+	}
+
+	static void capturarDatos() {
+		for (int i = 0; i < 3; i++) {
+			nombres[i] = capturarN();
+			organizaciones[i] = capturarOrg();
+			telefonos[i] = capturarTel();
+			if (i==1) {
+				while (telefonos[i-1].equals(telefonos[i])) {
+					System.out.println("El teléfono ya está registrado");
+					telefonos[i] = capturarTel();							
+				}
+			}			
+			if (i==2) {						
+				while (telefonos[i-2].equals(telefonos[i]) || telefonos[i-1].equals(telefonos[i])) {
+					System.out.println("El teléfono ya está registrado");
+					telefonos[i] = capturarTel();							
+				}
+			}
+		}
+	}
+
+	static String capturarN() {
+		System.out.println("Escriba el nombre");
+		return inString.nextLine();
+	}
+
+	static String capturarOrg() {
+		System.out.println("Escriba la organización");
+		return inString.nextLine();
+	}
+
+	static String capturarTel() {
+		System.out.println("Escriba el telefono");
+		return inString.nextLine();
+	}
+
+	static int menu() {
+		System.out.println("Agenda telefónica:");
+		System.out.println("1. Agregar contacto");
+		System.out.println("2. Buscar contacto");
+		System.out.println("3. Eliminar contacto");
+		System.out.println("4. Salir");
+		return in.nextInt();
+	}
+	
+	static int menu2() {
+		System.out.println("¿Qué contacto quiere buscar?");
+		System.out.println("1. contacto 1");
+		System.out.println("2. contacto 2");
+		System.out.println("3. contacto 3");
+		return in.nextInt();
+	}
+	
+	static int menu3() {
+		System.out.println("¿Qué contacto quiere eliminar?");
+		System.out.println("1. contacto 1");
+		System.out.println("2. contacto 2");
+		System.out.println("3. contacto 3");
+		return in.nextInt();
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 7</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+import java.util.Scanner;
+
+public class Ejercicio7 {
+	
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+
+	static String[] nombres = new String[5];
+	static String[] telefonos = new String[5];
+	static String[] marcas = new String[5];
+	static String[] placas = new String[5];
+	
+	public static void main(String[] args) {
+		int opcion = 0;
+		int opcion2 = 0;
+		int opcion3 = 0;
+
+		while (opcion != 4) {
+			opcion = menu();
+			switch (opcion) {
+			case 1:
+				capturarDatos();
+				break;
+			case 2:
+				opcion2 = menu2();
+				buscar(opcion2);
+				break;
+			case 3:
+				opcion3 = menu2();
+				eliminar(opcion3);
+				break;
+			case 4:
+				System.out.println("Adios");
+				break;
+
+			default:
+				System.out.println("Opción invalida");
+			}
+		}
+
+	}
+	
+	static void eliminarDatos(int opcion) {
+		nombres[opcion-1] = "Sin registro";
+		telefonos[opcion-1] = "Sin registro";
+		marcas[opcion-1] = "Sin registro";
+		placas[opcion-1] = "Sin registro";
+		System.out.println("¡Auto eliminado!");
+		
+	}
+	
+	static void eliminar(int opcion) {
+		switch (opcion) {
+		case 1:
+			eliminarDatos(opcion);
+			break;
+		case 2:
+			eliminarDatos(opcion);
+			break;
+		case 3:
+			eliminarDatos(opcion);
+			break;
+		case 4:
+			eliminarDatos(opcion);
+			break;
+		case 5:
+			eliminarDatos(opcion);
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+	}
+	
+	static void buscarDatos(int opcion) {
+		System.out.println("Nombre: "+nombres[opcion-1]+" Teléfono: "+telefonos[opcion-1]+" Marca: "+ marcas[opcion-1]+" Placa: "+ placas[opcion-1]);;
+		
+	}
+
+	static void buscar(int opcion) {
+		switch (opcion) {
+		case 1:
+			buscarDatos(opcion);
+			break;
+		case 2:
+			buscarDatos(opcion);
+			break;
+		case 3:
+			buscarDatos(opcion);
+			break;
+		case 4:
+			buscarDatos(opcion);
+			break;
+		case 5:
+			buscarDatos(opcion);
+			break;
+		default:
+			System.out.println("Opción invalida");
+		}
+
+	}
+
+	static void capturarDatos() {
+		for (int i = 0; i < 5; i++) {
+			nombres[i] = capturarN();
+			telefonos[i] = capturarTel();
+			marcas[i] = capturaMarca();
+			placas[i] = capturaPlaca();
+			
+			if (i==1) {
+				while (placas[i-1].equals(placas[i])) {
+					System.out.println("La placa ya está registrada");
+					placas[i] = capturaPlaca();							
+				}
+			}			
+			if (i==2) {						
+				while (placas[i-2].equals(placas[i]) || placas[i-1].equals(placas[i])) {
+					System.out.println("La placa ya está registrada");
+					placas[i] = capturaPlaca();							
+				}
+			}			
+			if (i==3) {						
+				while (placas[i-3].equals(placas[i]) || placas[i-2].equals(placas[i]) || placas[i-1].equals(placas[i])) {
+					System.out.println("La placa ya está registrada");
+					placas[i] = capturaPlaca();							
+				}
+			}
+			
+			if (i==4) {						
+				while (placas[i-4].equals(placas[i]) || placas[i-3].equals(placas[i]) || placas[i-2].equals(placas[i]) || placas[i-1].equals(placas[i])) {
+					System.out.println("La placa ya está registrada");
+					placas[i] = capturaPlaca();							
+				}
+			}
+		}
+	}
+
+	static String capturarN() {
+		System.out.println("Escriba el nombre");
+		return inString.nextLine();
+	}
+
+	static String capturaMarca() {
+		System.out.println("Escriba la marca");
+		return inString.nextLine();
+	}
+	
+	static String capturaPlaca() {
+		System.out.println("Escriba la placa");
+		return inString.nextLine();
+	}
+
+	static String capturarTel() {
+		System.out.println("Escriba el telefono");
+		return inString.nextLine();
+	}
+
+	static int menu() {
+		System.out.println("Elija una opcion:");
+		System.out.println("1. Agregar automovil");
+		System.out.println("2. Buscar automovil");
+		System.out.println("3. Eliminar automovil");
+		System.out.println("4. Salir");
+		return in.nextInt();
+	}
+	
+	static int menu2() {
+		System.out.println("¿Qué automovil quiere buscar?");
+		System.out.println("1. automovil 1");
+		System.out.println("2. automovil 2");
+		System.out.println("3. automovil 3");
+		System.out.println("4. automovil 4");
+		System.out.println("5. automovil 5");
+		return in.nextInt();
+	}
+	
+	static int menu3() {
+		System.out.println("¿Qué automovil quiere eliminar?");
+		System.out.println("1. automovil 1");
+		System.out.println("2. automovil 2");
+		System.out.println("3. automovil 3");
+		System.out.println("4. automovil 4");
+		System.out.println("5. automovil 5");
+		return in.nextInt();
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 8</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller3Ciclos;
+
+import java.util.Scanner;
+
+public class Ejercicio8 {
+
+	private static Scanner in = new Scanner(System.in);
+	private static Scanner inString = new Scanner(System.in);
+
+	static String[] nombres = new String[8];
+	static double[] notas = new double[8];
+	static boolean[] asistencias = new boolean[8];
+
+	public static void main(String[] args) {
+		int opcion = 0;
+
+		while (opcion != 4) {
+			opcion = menu();
+			switch (opcion) {
+			case 1:
+				capturarDatos();
+				break;
+			case 2:
+				calculoNotas(notas);
+//				buscar(opcion2);
+				break;
+			case 3:
+//				opcion3 = menu2();
+//				eliminar(opcion3);
+				break;
+			case 4:
+				System.out.println("Adios");
+				break;
+
+			default:
+				System.out.println("Opción invalida");
+			}
+		}
+
+	}
+	
+	static void calculoNotas(double[] A) {
+		System.out.println("Lista de usuarios con nota que presentaron el curso:");
+		for (int i = 0; i < notas.length; i++) {
+			if (asistencias[i]) {
+				System.out.print(nombres[i]+": Nota:"+notas[i]);
+				if (notas[i]>=3.0) {
+					System.out.println(" Aprobó");
+				} else {
+					System.out.println(" No aprobó");
+				}
+			}
+			
+		}
+	}
+	
+
+	static void capturarDatos() {
+		for (int i = 0; i < 8; i++) {
+			nombres[i] = capturarN();
+			asistencias[i] = capturaAsistencia();
+			if (asistencias[i]) {
+				notas[i] = capturarNotas();
+			}
+
+		}
+	}
+
+	static String capturarN() {
+		System.out.println("Escriba el nombre");
+		return inString.nextLine();
+	}
+
+	static double capturarNotas() {
+		System.out.println("Escriba la nota");
+		return in.nextDouble();
+	}
+
+	static boolean capturaAsistencia() {
+		System.out.println("Escriba la Asistencia (true o false)");
+		return in.nextBoolean();
+	}
+
+	static int menu() {
+		System.out.println("Elija una opcion:");
+		System.out.println("1. Registrar usuario");
+		System.out.println("2. Consultar resultados");
+		System.out.println("3. Salir");
+		return in.nextInt();
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+    </section>
+    
+</body>
+</html>

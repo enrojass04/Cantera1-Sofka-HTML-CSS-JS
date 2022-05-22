@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="form.css">
+    <script async src="js/index.js"></script>
+    <script async src="js/form.js"></script>
+
+    <nav>
+        <ul class="nav">
+            <li><a href="index.html">Información</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="personales.html">Ref Personales</a></li>
+             <li><a href="familiares.html">Ref Familiares</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="form.html">Contactenos</a></li>
+            <li><a href="portafolio/index.html">Portafolio</a></li>            
+        </ul>
+    </nav>
+    
+</head>
+
+<body>
+    <main>
+        <section class="form-registro">
+            <h4>Formulario de Contacto</h4>
+            <input class="entradas" type="text" name="nombres" id="nombres" placeholder="Ingrese su nombre">
+            <input class="entradas" type="email" name="correo" id="correo" placeholder="Ingrese su correo">
+            <input class="entradas" type="text" name="asunto" id="asunto" placeholder="Escriba el asunto">
+            <input class="entradas" type="text" name="mensaje" id="mensaje" placeholder="Escriba el mensaje">
+            <button class="boton" type="submit" onclick="guardar()">Enviar</button>
+            <button class="boton" type="submit" onclick="borrar()">Restablecer</button>
+        </section>
+    </main>
+</body>
+
+</html>

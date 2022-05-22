@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script async src="js/index.js"></script>
+
+    <nav>
+        <ul class="nav">
+            <li><a href="index.html">Información</a></li>
+            <li><a href="experiencia.html">Experiencia</a></li>
+            <li><a href="personales.html">Ref Personales</a></li>
+             <li><a href="familiares.html">Ref Familiares</a></li>
+            <li><a href="estudios.html">Estudios</a></li>
+            <li><a href="form.html">Contactenos</a></li>
+            <li><a href="form.html">Portafolio</a></li>
+        </ul>
+    </nav>
+</head>
+
+<body id="body" onload="principal()">
+
+    <select name="fondo" id="fondo" onchange="cambiarFondo(this)">
+        <option value="#A1D6E2">Tema 1</option>
+        <option value="#BCBABE">Tema 2</option>
+        <option value="#F1F1F2">Tema 3</option>
+    </select> 
+    
+    <main>
+        <section class="foto">
+            <img src="perfil.png" alt="Foto" width="120" height="160">
+        </section>
+
+        <section class="informacion">
+            <h3>EDUWIN ROJAS</h3>
+            <p>Estudiante de Tecnología <br>
+            en Desarrollo de Software</p>
+            <p>31 Años</p>
+        </section>
+
+        <section id="tema2" class="perfil">
+            <section>
+                <article class="datos">
+                    <h5>PROGRAMADOR JUNIOR</h5>
+                    <p>Estudiante de Tecnología en Desarrollo de Software, con un graninterés en el desarrollo
+                        de Software y desarrollo Web. Con capacidad para aprender y aplicar mis conocimientos 
+                        al ámbito profesional. En busca de una oportunidad laboral en la que desarrollar mis 
+                        habilidades y adquirir experiencia.
+                    </p>
+                </article>
+            </section>
+            <section>
+                <article class="habilidades">
+                    <h5>HABILIDADES</h5>
+                    <ul>
+                        <li> Java </li>
+                        <li> JavaScript </li>
+                        <li> MySQL </li>
+                        <li> Ofimática </li>
+                    </ul>
+                </article>
+            </section>
+        </section>
+
+    </main>
+
+    <footer>
+        <a href="https://drive.google.com/uc?id=1P-FcnpMUL-HExi4iaxHtgJEOGC65FGyw&export=download"
+            download="Curriculum Vitae">
+            Descargar Hoja de Vida
+        </a>
+    </footer>
+</body>
+
+</html>

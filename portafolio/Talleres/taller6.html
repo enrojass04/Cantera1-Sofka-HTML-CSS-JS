@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script async src="../js/index.js"></script>
+</head>
+<body>
+
+    <button type="button" class="regresar"><a href="../index.html">Volver al portafolio</a></button>
+    <h1>Taller1 Java</h1>
+    <section class="seccion1">
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 1</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller1Variables;
+import java.util.Scanner;
+
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner (System.in);
+		
+		System.out.println("Escriba su nombre:");
+		String nombre = in.nextLine();
+		System.out.println("Escriba su apellido:");
+		String apellido = in.nextLine();
+
+	}
+	
+}                        
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 2</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller1Variables;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		
+		System.out.println("Escriba su nombre:");
+		String nombre = in.nextLine();
+		System.out.println("Escriba sus apellidos:");
+		String apellidos = in.nextLine();		
+		System.out.println("Escriba su edad:");
+		int edad = in.nextInt();
+		System.out.println("Escriba su estatura:");
+		double estatura = in.nextDouble();
+
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 3</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller1Variables;
+
+import java.util.Scanner;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Escriba su nombre y apellido:");
+		String nombre = in.nextLine();
+		System.out.println("Escriba su nombre su papá:");
+		String nombrePapa = in.nextLine();
+		System.out.println("Escriba el apellido de su papá:");
+		String apellidoPapa = in.nextLine();
+		System.out.println("Escriba su nombre su mamá:");
+		String nombreMama = in.nextLine();
+		System.out.println("Escriba el apellido de su mamá:");
+		String apellidoMama = in.nextLine();
+
+		String m = mensaje(nombre, nombreMama, nombreMama);
+		System.out.println(m);
+
+	}
+
+	static String mensaje(String nombre, String nombrePapa, String nombreMama) {
+		return "Yo " + nombre + ", soy hijo de " + nombreMama + " y " + nombrePapa;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 4</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller1Variables;
+
+import java.util.Scanner;
+
+public class Ejercicio4 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Escriba el nombre de una ciudad capital:");
+		String ciudad = in.nextLine();
+		System.out.println("Escriba el nombre del país:");
+		String pais = in.nextLine();
+
+		String c = ciudad(ciudad, pais);
+		System.out.println(c);
+
+	}
+
+	static String ciudad(String ciudad, String pais) {
+		return "La ciudad " + ciudad + ", es la capital del país " + pais;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 5</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller1Variables;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+
+		System.out.println("Escriba el nombre de la mascota:");
+		String nombreMascota = in.nextLine();
+		System.out.println("Escriba la edad de la mascota:");
+		int edad = in.nextInt();
+		in.nextLine();
+		System.out.println("Escriba el tipo de la mascota:");
+		String tipo = in.nextLine();
+		System.out.println("Escriba su nombre completo:");
+		String nombre = in.nextLine();
+		String n = mascota(nombreMascota, edad, tipo, nombre);
+		System.out.println(n);
+
+	}
+
+	static String mascota(String nombreMascota, int edad, String tipo, String nombre) {
+		return nombreMascota + " es un(a) " + tipo + ", el cual, tiene " + edad + " años de edad y " + nombre
+				+ " es actualmente su dueño(a).";
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+    </section>
+    
+</body>
+</html>

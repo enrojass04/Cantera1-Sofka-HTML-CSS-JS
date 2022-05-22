@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/estilo.css">
+    <script async src="../js/index.js"></script>
+</head>
+<body>
+
+    <button type="button" class="regresar"><a href="../index.html">Volver al portafolio</a></button>
+    <h1>Taller4 Java</h1>
+    <section class="seccion1">
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 1</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller4Arreglos;
+
+import java.util.Scanner;
+
+public class Ejercicio1 {
+	
+	private static Scanner in = new Scanner(System.in);
+	static int[] numeros = new int[5];
+
+	public static void main(String[] args) {
+
+		vector();
+		imprimir(numeros);
+
+	}
+	
+	
+	static void imprimir(int[] array) {
+		for (int i = 0; i < array.length; i++) {
+			System.out.println("["+i+"]"+" = "+ array[i]);
+			
+		}
+	}
+	
+	static int [] vector() {
+		for (int i = 0; i < numeros.length; i++) {
+			numeros[i] =  capturar();			
+		}
+		return numeros;
+	}
+	
+	static int capturar() {
+		System.out.println("Escriba el numero la posición ");
+		return in.nextInt();
+	}
+
+}                        
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 2</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller4Arreglos;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+	
+	private static Scanner in = new Scanner(System.in);
+	static int[] numeros = new int[20];
+
+	public static void main(String[] args) {
+
+		vector();
+		int n1 = contarPares(numeros);
+		int n2 = contarImpares(numeros);
+		int[] pares = new int[n1];
+		int[] impares = new int[n2];
+		int[] pares2 = llenarPares(pares);
+		int[] impares2 = llenarImpares(impares);
+		System.out.print("Números pares: ");
+		imprimir(pares2);
+		System.out.println();
+		System.out.print("Números impares: ");
+		imprimir(impares2);
+
+	}
+	
+	static int[] llenarPares(int[] array){
+		int count = 0;
+		for (int i = 0; i < numeros.length; i++) {
+			if (numeros[i] % 2 == 0) {
+				array[count] = numeros[i];
+				count++;
+			}
+		}
+		return array;
+	}
+	
+	static int[] llenarImpares(int[] array){
+		int count = 0;
+		for (int i = 0; i < numeros.length; i++) {
+			if (numeros[i] % 2 != 0) {
+				array[count] = numeros[i];
+				count++;
+			}
+		}
+		return array;
+	}
+	
+	static void imprimir(int[] array) {
+		for (int i = 0; i < array.length-1; i++) {
+			System.out.print(array[i] + ", ");
+			
+		}
+		System.out.print(array[array.length-1]);
+		
+	}
+	
+	static int [] vector() {
+		for (int i = 0; i < numeros.length; i++) {
+			numeros[i] = (int) (Math.random()*100+1);			
+		}
+		return numeros;
+	}
+	
+	static int contarPares(int[] array){
+		int count = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (numeros[i] % 2 == 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+	
+	static int contarImpares(int[] array){
+		int count = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (numeros[i] % 2 != 0) {
+				count++;
+			}
+		}
+		return count;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 3</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller4Arreglos;
+
+public class Ejercicio3 {
+
+	public static void main(String[] args) {
+
+		String primos = primos(1000);
+		System.out.println(primos);
+
+	}
+	
+	static String primos(int n) {
+		String str = "";
+		for (int i = 1; i <= n; i++) {
+			int count = 0;
+			for (int j = 1; j <= i; j++) {
+				if (i % j == 0) {
+					count++;
+				}					
+			}
+			
+			if (count == 2) {
+				str += i +" ";
+			}
+		}
+		return str;
+		
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 4</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller4Arreglos;
+
+public class Ejercicio4 {
+	
+	public static void main(String[] args) {
+		
+		String [][] M = {{"01","02","03","04","05"},
+						{"06","07","08","09","10"},
+						{"11","12","13","14","15"},
+						{"16","17","18","20","20"}};
+		
+		imprimir(M);
+
+	}
+	
+	static String [][] imprimir(String [][] array){
+		for (int i = 0; i < array.length; i++) {
+			for (int j = 0; j < array[0].length; j++) {
+				if (i % 2 == 0) {
+					System.out.print(array[i][j] + " ");
+				} else {
+					System.out.print(array[i][4-j] + " ");
+				}
+			}
+			System.out.println();
+		}
+		return array;
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+        <article class="articulos1">
+            <button class="acordeonInt">Ejercicio 5</button>
+            <section class="mostrar2">
+                <pre>
+                    <code>
+package Taller4Arreglos;
+
+import java.util.Scanner;
+
+public class Ejercicio5 {
+
+	private static Scanner in = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int[][] A = new int[10][10];
+		llenarMatriz(A);
+		System.out.println();
+	}
+
+	static void llenarMatriz(int[][] A) {
+		for (int i = 0; i < A.length; i++) {
+			for (int j = 0; j < A[0].length; j++) {
+				A[i][j] = (i+1)*(j+1);
+				if (i < 9) {
+					System.out.print((j + 1) + " x " + (i + 1) + "   ");
+				} else {
+					System.out.print((j + 1) + " x " + (i + 1) + "  ");
+				}
+
+			}
+			System.out.println();
+		}
+		System.out.println("Escriba la fila");
+		int fila = in.nextInt();
+		System.out.println("Escriba la columna");	
+		int columna = in.nextInt();
+		System.out.println("El resultado de "+ fila +"x"+columna+ " es:");
+		System.out.println(A[fila-1][columna-1]);
+	}
+
+}
+                    </code>
+                </pre>
+            </section>
+        </article>
+
+    </section>
+    
+</body>
+</html>
