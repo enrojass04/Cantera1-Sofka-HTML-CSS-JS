@@ -1,3 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #b2bbce;
+    width: 1024px;
+    margin: auto;
+}
+
+main {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+    justify-content: center;
+    margin-top: 10px;
+    border: 1px solid #1995AD;
+    border-radius: 5px;
+}
+
+main h1, h3 {
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    margin: 10px 0;
+    padding: 5px 20px;
+}
+
+
+p {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.frutas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px; 
+}
+
 
 .selector {
     width: 30px;
@@ -8,10 +59,20 @@
 
 #oscuro {
     background-color: rebeccapurple;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 #claro {
     background-color: green ;
+    border-radius: 5px;
+    width: 100px;
+    height: 50px;
+    margin-left: 20px;
+    margin-bottom: 15px;
 }
 
 #selectors-container {
